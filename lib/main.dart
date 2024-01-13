@@ -1,8 +1,6 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:chat_app/screens/auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 
 final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
@@ -27,10 +25,9 @@ final theme = ThemeData().copyWith(
   ),
 );
 
-void main() async {
-  await dotenv.load(fileName: '.env');
+void main() {
   runApp(
-    const ProviderScope(child: MyApp()),
+    const MyApp(),
   );
 }
 
@@ -39,10 +36,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Great Places',
-      theme: theme,
-      home: ...,
+      home: AuthScreen(),
     );
   }
 }
