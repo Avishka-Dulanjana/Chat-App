@@ -1,16 +1,27 @@
-# chat_app
-
-A new Flutter project for chatting.
-
-## Getting Started
+# Online Chatting Application
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# Firebase Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [feedbackFirebase CLI reference](https://firebase.google.com/docs/cli#windows-npm)
+- [Firebase Auth REST API](https://firebase.google.com/docs/reference/rest/auth)
+- [Add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup?platform=ios)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Steps
+
+- Add Firebase to your Flutter app - all steps in there and refer it clearly
+
+### Need to add this code into main before apps run
+
+```agsl
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+     options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
+  }
+
+```
