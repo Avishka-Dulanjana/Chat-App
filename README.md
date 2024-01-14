@@ -8,9 +8,15 @@ This project is a starting point for a Flutter application.
 - [Firebase Auth REST API](https://firebase.google.com/docs/reference/rest/auth)
 - [Add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup?platform=ios)
 
-# Steps
 
-- Add Firebase to your Flutter app - all steps in there and refer it clearly
+## Environment variable set
+- C:\Users\Avishka Dulanjana\AppData\Roaming\npm
+- C:\Users\Avishka Dulanjana\AppData\Local\Pub\Cache\bin
+
+
+## Steps
+
+- Add Firebase to your Flutter app - all steps in there and refer it carefully
 
 ### Need to add this code into main before apps run
 
