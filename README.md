@@ -57,3 +57,24 @@ service firebase.storage {
  flutter pub add image_picker 
  flutter pub add firebase_storage
 ```
+
+# Fire store storage setup
+
+<b>Add this security rule to authentic users can view, upload image</b>
+
+```agsl
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
+<b>Add this dependencies also to upload image to firebase and take images</b>
+
+```agsl
+ flutter pub add cloud_firestore
+```
