@@ -78,3 +78,17 @@ service cloud.firestore {
 ```agsl
  flutter pub add cloud_firestore
 ```
+
+<b>Also need to update this in there (android/app/build.gradle)</b>
+```agsl
+defaultConfig{
+
+  minSdkVersion 19
+  targetSdkVersion flutter.targetSdkVersion
+  versionCode flutterVersionCode.toInteger()
+  versionName flutterVersionName
+  multiDexEnabled true
+        
+}
+
+```
